@@ -43,8 +43,7 @@ before_install:
 
 install:
   # Override default travis to use the maven wrapper
-  # skip license on travis due to #1512
-  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V -Dlicense.skip=true
+  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 
 # Don't build release tags. This avoids publish conflicts because the version commit exists both on master and the release tag.
