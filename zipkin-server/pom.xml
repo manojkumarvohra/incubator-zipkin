@@ -18,13 +18,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>io.zipkin.zipkin2</groupId>
+    <groupId>org.apache.zipkin.zipkin2</groupId>
     <artifactId>parent</artifactId>
-    <version>2.12.10-SNAPSHOT</version>
+    <version>2.13.0-SNAPSHOT</version>
   </parent>
 
   <!-- TODO: group ID change: https://github.com/openzipkin/zipkin/issues/2132 -->
-  <groupId>io.zipkin.java</groupId>
+  <groupId>org.apache.zipkin.zipkin2</groupId>
   <artifactId>zipkin-server</artifactId>
   <name>Zipkin Server</name>
 
@@ -95,18 +95,18 @@
     </dependency>
 
     <dependency>
-      <groupId>io.zipkin.zipkin2</groupId>
+      <groupId>org.apache.zipkin.zipkin2</groupId>
       <artifactId>zipkin</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>io.zipkin.zipkin2</groupId>
+      <groupId>org.apache.zipkin.zipkin2</groupId>
       <artifactId>zipkin-collector</artifactId>
     </dependency>
 
     <!-- Static content for the web UI -->
     <dependency>
-      <groupId>io.zipkin.java</groupId>
+      <groupId>org.apache.zipkin.zipkin2</groupId>
       <artifactId>zipkin-autoconfigure-ui</artifactId>
       <version>${project.version}</version>
       <optional>true</optional>
@@ -114,7 +114,7 @@
 
     <!-- Cassandra backend -->
     <dependency>
-      <groupId>io.zipkin.java</groupId>
+      <groupId>org.apache.zipkin.zipkin2</groupId>
       <artifactId>zipkin-autoconfigure-storage-cassandra</artifactId>
       <version>${project.version}</version>
       <optional>true</optional>
@@ -154,7 +154,7 @@
 
     <!-- Cassandra 3 backend -->
     <dependency>
-      <groupId>io.zipkin.java</groupId>
+      <groupId>org.apache.zipkin.zipkin2</groupId>
       <artifactId>zipkin-autoconfigure-storage-cassandra3</artifactId>
       <version>${project.version}</version>
       <optional>true</optional>
@@ -172,7 +172,7 @@
 
     <!-- Elasticsearch http -->
     <dependency>
-      <groupId>io.zipkin.java</groupId>
+      <groupId>org.apache.zipkin.zipkin2</groupId>
       <artifactId>zipkin-autoconfigure-storage-elasticsearch</artifactId>
       <version>${project.version}</version>
       <optional>true</optional>
@@ -180,7 +180,7 @@
 
     <!-- MySQL backend -->
     <dependency>
-      <groupId>io.zipkin.java</groupId>
+      <groupId>org.apache.zipkin.zipkin2</groupId>
       <artifactId>zipkin-autoconfigure-storage-mysql</artifactId>
       <version>${project.version}</version>
       <optional>true</optional>
@@ -188,7 +188,7 @@
 
     <!-- Kafka Collector -->
     <dependency>
-      <groupId>io.zipkin.java</groupId>
+      <groupId>org.apache.zipkin.zipkin2</groupId>
       <artifactId>zipkin-autoconfigure-collector-kafka</artifactId>
       <version>${project.version}</version>
       <optional>true</optional>
@@ -196,7 +196,7 @@
 
     <!-- RabbitMQ Collector -->
     <dependency>
-      <groupId>io.zipkin.java</groupId>
+      <groupId>org.apache.zipkin.zipkin2</groupId>
       <artifactId>zipkin-autoconfigure-collector-rabbitmq</artifactId>
       <version>${project.version}</version>
       <optional>true</optional>
@@ -204,7 +204,7 @@
 
     <!--Prometheus metrics-->
     <dependency>
-      <groupId>io.zipkin.java</groupId>
+      <groupId>org.apache.zipkin.zipkin2</groupId>
       <artifactId>zipkin-autoconfigure-metrics-prometheus</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -240,7 +240,7 @@
     </dependency>
 
     <dependency>
-      <groupId>io.zipkin.zipkin2</groupId>
+      <groupId>org.apache.zipkin.zipkin2</groupId>
       <artifactId>zipkin</artifactId>
       <type>test-jar</type>
       <scope>test</scope>

@@ -17,9 +17,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>io.zipkin.zipkin2</groupId>
+  <groupId>org.apache.zipkin.zipkin2</groupId>
   <artifactId>parent</artifactId>
-  <version>2.12.10-SNAPSHOT</version>
+  <version>2.13.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <modules>
@@ -102,7 +102,7 @@
 
   <name>Zipkin (Parent)</name>
   <description>Zipkin (Parent)</description>
-  <url>https://github.com/openzipkin/zipkin</url>
+  <url>https://github.com/apache/incubator-zipkin</url>
   <inceptionYear>2015</inceptionYear>
 
   <organization>
@@ -119,9 +119,9 @@
   </licenses>
 
   <scm>
-    <url>https://github.com/openzipkin/zipkin</url>
-    <connection>scm:git:https://github.com/openzipkin/zipkin.git</connection>
-    <developerConnection>scm:git:https://github.com/openzipkin/zipkin.git</developerConnection>
+    <url>https://github.com/apache/incubator-zipkin</url>
+    <connection>scm:git:https://github.com/apache/incubator-zipkin.git</connection>
+    <developerConnection>scm:git:https://github.com/apache/incubator-zipkin.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
@@ -130,122 +130,135 @@
     <developer>
       <id>openzipkin</id>
       <name>OpenZipkin Gitter</name>
-      <url>https://gitter.im/openzipkin/zipkin</url>
+      <url>https://gitter.im/apache/incubator-zipkin</url>
     </developer>
   </developers>
 
+  <mailingLists>
+    <mailingList>
+      <name>Zipkin Developer List</name>
+      <post>dev@zipkin.apache.org</post>
+      <subscribe>dev-subscribe@zipkin.apache.org</subscribe>
+      <unsubscribe>dev-unsubscribe@zipkin.apache.org</unsubscribe>
+    </mailingList>
+    <mailingList>
+      <name>Zipkin Commits</name>
+      <post>commits@zipkin.apache.org</post>
+      <subscribe>commits-subscribe@zipkin.apache.org</subscribe>
+      <unsubscribe>commits-unsubscribe@zipkin.apache.org</unsubscribe>
+    </mailingList>
+  </mailingLists>
+
   <distributionManagement>
     <repository>
-      <id>bintray</id>
-      <url>https://api.bintray.com/maven/openzipkin/maven/zipkin/;publish=1</url>
+      <id>apache.releases.https</id>
+      <url>https://repository.apache.org/service/local/staging/deploy/maven2</url>
     </repository>
     <snapshotRepository>
-      <id>jfrog-snapshots</id>
-      <url>https://oss.jfrog.org/artifactory/oss-snapshot-local</url>
+      <id>apache.snapshots.https</id>
+      <url>https://repository.apache.org/content/repositories/snapshots/</url>
     </snapshotRepository>
   </distributionManagement>
 
   <issueManagement>
     <system>Github</system>
-    <url>https://github.com/openzipkin/zipkin/issues</url>
+    <url>https://github.com/apache/incubator-zipkin/issues</url>
   </issueManagement>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>io.zipkin.zipkin2</groupId>
+        <groupId>org.apache.zipkin.zipkin2</groupId>
         <artifactId>zipkin</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>io.zipkin.zipkin2</groupId>
+        <groupId>org.apache.zipkin.zipkin2</groupId>
         <artifactId>zipkin</artifactId>
         <type>test-jar</type>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>io.zipkin.zipkin2</groupId>
+        <groupId>org.apache.zipkin.zipkin2</groupId>
         <artifactId>zipkin-collector</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>io.zipkin.zipkin2</groupId>
+        <groupId>org.apache.zipkin.zipkin2</groupId>
         <artifactId>zipkin-storage-elasticsearch</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>io.zipkin.zipkin2</groupId>
+        <groupId>org.apache.zipkin.zipkin2</groupId>
         <artifactId>zipkin-junit</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>io.zipkin.zipkin2</groupId>
+        <groupId>org.apache.zipkin.zipkin2</groupId>
         <artifactId>zipkin-storage-cassandra-v1</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>io.zipkin.zipkin2</groupId>
+        <groupId>org.apache.zipkin.zipkin2</groupId>
         <artifactId>zipkin-storage-cassandra</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>io.zipkin.zipkin2</groupId>
+        <groupId>org.apache.zipkin.zipkin2</groupId>
         <artifactId>zipkin-storage-mysql-v1</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>io.zipkin.zipkin2</groupId>
+        <groupId>org.apache.zipkin.zipkin2</groupId>
         <artifactId>zipkin-collector-kafka08</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>io.zipkin.zipkin2</groupId>
+        <groupId>org.apache.zipkin.zipkin2</groupId>
         <artifactId>zipkin-collector-kafka</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>io.zipkin.zipkin2</groupId>
+        <groupId>org.apache.zipkin.zipkin2</groupId>
         <artifactId>zipkin-collector-rabbitmq</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>io.zipkin.zipkin2</groupId>
+        <groupId>org.apache.zipkin.zipkin2</groupId>
         <artifactId>zipkin-collector-scribe</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>io.zipkin.zipkin2</groupId>
+        <groupId>org.apache.zipkin.zipkin2</groupId>
         <artifactId>zipkin-collector-grpc</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <groupId>io.zipkin.zipkin2</groupId>
+        <groupId>org.apache.zipkin.zipkin2</groupId>
         <artifactId>zipkin-lens</artifactId>
         <version>${project.version}</version>
       </dependency>
 
       <dependency>
-        <!-- TODO: group ID change: https://github.com/openzipkin/zipkin/issues/2132 -->
-        <groupId>io.zipkin.java</groupId>
+        <groupId>org.apache.zipkin.zipkin2</groupId>
         <artifactId>zipkin-ui</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <!-- TODO: group ID change: https://github.com/openzipkin/zipkin/issues/2132 -->
-        <groupId>io.zipkin.java</groupId>
+        <groupId>org.apache.zipkin.zipkin2</groupId>
         <artifactId>zipkin-server</artifactId>
         <version>${project.version}</version>
       </dependency>
@@ -447,6 +460,7 @@
         <artifactId>brave</artifactId>
         <version>${brave.version}</version>
         <exclusions>
+          <!-- TODO: this exclusion will drift when brave switches to apache zipkin -->
           <exclusion>
             <groupId>io.zipkin.zipkin2</groupId>
             <artifactId>zipkin</artifactId>
@@ -770,7 +784,7 @@
           <useReleaseProfile>false</useReleaseProfile>
           <releaseProfiles>release</releaseProfiles>
           <autoVersionSubmodules>true</autoVersionSubmodules>
-          <!-- to match zipkin-scala (openzipkin/zipkin) -->
+          <!-- to match zipkin-scala (apache/incubator-zipkin) -->
           <tagNameFormat>@{project.version}</tagNameFormat>
         </configuration>
       </plugin>
