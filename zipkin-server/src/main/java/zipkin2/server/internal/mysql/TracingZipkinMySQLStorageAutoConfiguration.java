@@ -1,5 +1,5 @@
 /*
- * Copyright 2015-2018 The OpenZipkin Authors
+ * Copyright 2015-2019 The OpenZipkin Authors
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
@@ -11,7 +11,7 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package zipkin2.autoconfigure.storage.mysql;
+package zipkin2.server.internal.mysql;
 
 import brave.Span;
 import brave.Tracing;
@@ -26,19 +26,19 @@ import org.jooq.impl.DefaultExecuteListener;
 import org.jooq.impl.DefaultExecuteListenerProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import zipkin2.Endpoint;
+import zipkin2.server.internal.ConditionalOnSelfTracing;
 
 /** Sets up the MySQL tracing in Brave as an initialization. */
-@ConditionalOnBean(Tracing.class)
+@ConditionalOnSelfTracing
 @ConditionalOnProperty(name = "zipkin.storage.type", havingValue = "mysql")
 @Configuration
-public class TracingZipkinMySQLStorageAutoConfiguration extends DefaultExecuteListener {
+class TracingZipkinMySQLStorageAutoConfiguration extends DefaultExecuteListener {
 
   @Autowired ZipkinMySQLStorageProperties mysql;
 
